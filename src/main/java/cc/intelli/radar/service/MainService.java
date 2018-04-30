@@ -6,4 +6,5 @@ package cc.intelli.radar.service;
 interface MainService {
     void importRadarData();
     void importTargetData();
+    void importADSBData();
 }

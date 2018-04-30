@@ -11,9 +11,8 @@ import javax.persistence.*;
 public class Radar extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-    private long sid;
+    //@GeneratedValue(strategy = GenerationType.AUTO)
+    private long radarid;
     private double longitude;
     private double latitude;
     private double height;
@@ -22,29 +21,21 @@ public class Radar extends BaseEntity {
         super();
     }
 
-    public Radar(long sid, double longitude, double latitude,
+    public Radar(long radarid, double longitude, double latitude,
                  double height) {
         super();
-        this.sid = sid;
+        this.radarid = radarid;
         this.longitude = longitude;
         this.latitude = latitude;
         this.height = height;
     }
 
-    public long getId() {
-        return id;
+    public long getRadarid() {
+        return radarid;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public long getSid() {
-        return sid;
-    }
-
-    public void setSid(long sid) {
-        this.sid = sid;
+    public void setRadarid(long radarid) {
+        this.radarid = radarid;
     }
 
     public double getLongitude() {

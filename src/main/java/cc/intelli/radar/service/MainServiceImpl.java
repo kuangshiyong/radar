@@ -26,10 +26,6 @@ public class MainServiceImpl implements MainService {
         this.radarRepository = radarRepository;
     }
 
-    public void importData() {
-        importRadarData();
-    }
-
     @Override
     public void importRadarData() {
         String file = "./src/main/resources/static/datasource/RadarInfo_full.txt";
@@ -40,7 +36,7 @@ public class MainServiceImpl implements MainService {
             ComFuncs.printLog(getClass(), "line: " + l);
             String[] w = l.split("[ ,]");
             Radar radar = new RadarBuilder()
-                    .setSid(Integer.valueOf(w[0]))
+                    .setRadarid(Integer.valueOf(w[0]))
                     .setLongitude(Double.valueOf(w[3]))
                     .setLatitude(Double.valueOf(w[5]))
                     .setHeight(Double.valueOf(w[7]))
@@ -52,6 +48,11 @@ public class MainServiceImpl implements MainService {
 
     @Override
     public void importTargetData() {
+
+    }
+
+    @Override
+    public void importADSBData() {
 
     }
 }

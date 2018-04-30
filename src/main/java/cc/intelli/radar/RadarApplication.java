@@ -10,12 +10,11 @@ import javax.annotation.PostConstruct;
 @SpringBootApplication
 public class RadarApplication {
 
-    private final
-    MainServiceImpl radarService;
+    private final MainServiceImpl mainService;
 
     @Autowired
-    public RadarApplication(MainServiceImpl radarService) {
-        this.radarService = radarService;
+    public RadarApplication(MainServiceImpl mainService) {
+        this.mainService = mainService;
     }
 
     public static void main(String[] args) {
@@ -24,6 +23,6 @@ public class RadarApplication {
 
     @PostConstruct
     public void init() {
-        radarService.importData();
+        mainService.importRadarData();
     }
 }

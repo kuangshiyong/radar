@@ -7,7 +7,7 @@ import cc.intelli.radar.entity.Radar;
  */
 public class RadarBuilder {
 
-    private long sid;
+    private long radarid;
     private double longitude;
     private double latitude;
     private double height;
@@ -15,8 +15,8 @@ public class RadarBuilder {
     public RadarBuilder() {
     }
 
-    public RadarBuilder setSid(long sid) {
-        this.sid = sid;
+    public RadarBuilder setRadarid(long radarid) {
+        this.radarid = radarid;
         return this;
     }
 
@@ -36,6 +36,6 @@ public class RadarBuilder {
     }
 
     public Radar build() {
-        return new Radar(sid, longitude, latitude, height);
+        return new Radar(radarid, longitude, latitude, height);
     }
 }
