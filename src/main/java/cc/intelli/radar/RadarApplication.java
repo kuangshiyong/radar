@@ -1,6 +1,6 @@
 package cc.intelli.radar;
 
-import cc.intelli.radar.service.RadarServiceImpl;
+import cc.intelli.radar.service.MainServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,10 +11,10 @@ import javax.annotation.PostConstruct;
 public class RadarApplication {
 
     private final
-    RadarServiceImpl radarService;
+    MainServiceImpl radarService;
 
     @Autowired
-    public RadarApplication(RadarServiceImpl radarService) {
+    public RadarApplication(MainServiceImpl radarService) {
         this.radarService = radarService;
     }
 
