@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * @author guaguagua-mac
  */
-public interface RadarRepository
-        extends CrudRepository<Radar, Long> {
+public interface RadarRepository extends CrudRepository<Radar, Long> {
 
 }
